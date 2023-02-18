@@ -10,7 +10,6 @@ export interface State{
     equation: string;
     result: string;
     opPressed: boolean;
-    equalPressed: boolean;
 }
 
 export const initialState: State = <Calc>{
@@ -19,7 +18,6 @@ export const initialState: State = <Calc>{
     equation: '',
     result: '0',
     opPressed: false,
-    equalPressed: false,
 }
 
 export const reducer = createReducer(
@@ -56,46 +54,120 @@ export const reducer = createReducer(
             newState.opPressed = true;
             let result = 0;
             
-            if(action.key == '+' || action.key == '-' || action.key == 'x' || action.key == '/'){
-                newState.equation = action.key;
-            }else if(action.key == 'AC'){
-                return{
-                    ...state,
-                    numA: '',
-                    numB: '',
-                    equation: '',
-                    result: '0',
-                    opPressed: false
+            if(newState.equation != ''){
+                if(action.key == '+' || action.key == '-' || action.key == 'x' || action.key == '/'){
+                    newState.equation = action.key;
+                    switch(state.equation){
+                        case '+':
+                            result = parseFloat(newState.numA) + parseFloat(newState.numB);
+                            if(result % 1 != 0){
+                                newState.numA = result.toFixed(2);
+                            }else{
+                                newState.numA = result.toString();
+                            }
+                            newState.numB = '';
+                            break;
+                        case '-':
+                            result = parseFloat(newState.numA) - parseFloat(newState.numB);
+                            if(result % 1 != 0){
+                                newState.numA = result.toFixed(2);
+                            }else{
+                                newState.numA = result.toString();
+                            }
+                            newState.numB = '';
+                            break; 
+                        case 'x':
+                            result = parseFloat(newState.numA) * parseFloat(newState.numB);
+                            if(result % 1 != 0){
+                                newState.numA = result.toFixed(2);
+                            }else{
+                                newState.numA = result.toString();
+                            }
+                            newState.numB = '';
+                            break;
+                        case '/':
+                            result = parseFloat(newState.numA) / parseFloat(newState.numB);
+                            if(result % 1 != 0){
+                                newState.numA = result.toFixed(2);
+                            }else{
+                                newState.numA = result.toString();
+                            }
+                            newState.numB = '';
+                            break;
+                    }
+                    newState.result = result.toString();
+                }else if(action.key == 'AC'){
+                    return{
+                        ...state,
+                        numA: '',
+                        numB: '',
+                        equation: '',
+                        result: '0',
+                        opPressed: false,
+                    }
+                }else if(action.key == '='){
+                    switch(newState.equation){
+                        case '+':
+                            result = parseFloat(newState.numA) + parseFloat(newState.numB);
+                            result.toFixed(2);
+                            break;
+                        case '-':
+                            result = parseFloat(newState.numA) - parseFloat(newState.numB);
+                            result.toFixed(2);
+                            break; 
+                        case 'x':
+                            result = parseFloat(newState.numA) * parseFloat(newState.numB);
+                            result.toFixed(2);
+                            break;
+                        case '/':
+                            result = parseFloat(newState.numA) / parseFloat(newState.numB);
+                            result.toFixed(2);
+                            break;
+                    }
+                    // console.log(result);
+                    newState.result = result.toString();
                 }
-            }  
-            if(action.key == '='){
-                newState.equalPressed = true;
-                switch(newState.equation){
-                    case '+':
-                        result = parseFloat(newState.numA) + parseFloat(newState.numB);
-                        break;
-                    case '-':
-                        result = parseFloat(newState.numA) - parseFloat(newState.numB);
-                        break; 
-                    case 'x':
-                        result = parseFloat(newState.numA) * parseFloat(newState.numB);
-                        break;
-                    case '/':
-                        result = parseFloat(newState.numA) / parseFloat(newState.numB);
-                        break;
+                
+            }else{
+                if(action.key == '+' || action.key == '-' || action.key == 'x' || action.key == '/'){
+                    newState.equation = action.key;
+                }else if(action.key == 'AC'){
+                    return{
+                        ...state,
+                        numA: '',
+                        numB: '',
+                        equation: '',
+                        result: '0',
+                        opPressed: false,
+                    }
                 }
-                newState.result = result.toString();
-
-                return{
-                    ...state,
-                    numA: '',
-                    numB: '',
-                    equation: '',
-                    result: newState.result,
-                    opPressed: false,
-                }
+                if(action.key == '='){
+                    switch(newState.equation){
+                        case '+':
+                            result = parseFloat(newState.numA) + parseFloat(newState.numB);
+                            break;
+                        case '-':
+                            result = parseFloat(newState.numA) - parseFloat(newState.numB);
+                            break; 
+                        case 'x':
+                            result = parseFloat(newState.numA) * parseFloat(newState.numB);
+                            break;
+                        case '/':
+                            result = parseFloat(newState.numA) / parseFloat(newState.numB);
+                            break;
+                    }
+                    newState.result = result.toString();
+    
+                    return{
+                        ...state,
+                        numA: '',
+                        numB: '',
+                        equation: '',
+                        result: newState.result,
+                        opPressed: false,
+                    }
+                }            
             }
-            console.log(newState);
             return newState;
         }
         return state;
