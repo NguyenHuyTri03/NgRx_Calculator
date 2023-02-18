@@ -34,7 +34,6 @@ export const reducer = createReducer(
                     newState.numB = state.numB + '.';
                 }
             }else if(action.key == 'd'){
-                console.log(newState.opPressed);
                 if(state.numA != '' && newState.opPressed == false){
                     newState.numA = newState.numA.slice(0, -1);
                 }else if(state.numB != '' && newState.opPressed){
