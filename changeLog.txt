@@ -16,3 +16,6 @@ v1.2:
 	-Added "DEL" button along with its respective function
 	-KNown bugs:
 		+Cannot delete operators, ex: +, -, *, /
+
+v1.2.1:
+	-Fixed teeny tiny bug
