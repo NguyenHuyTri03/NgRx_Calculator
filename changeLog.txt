@@ -11,3 +11,8 @@ v1.1:
 
 v1.1.1:
 	-Added "changeLog.txt"
+
+v1.2:
+	-Added "DEL" button along with its respective function
+	-KNown bugs:
+		+Cannot delete operators, ex: +, -, *, /

@@ -24,16 +24,21 @@ export const reducer = createReducer(
     initialState,
     on(CalcActions.keyPressed, (state, action) => {
         let newState = {...state};
-
         if(action.keyType == 'num'){
             if(action.key == '.' && !state.numA.includes('.')){
                 if(!state.numA.includes('.')){
                     newState.numA = state.numA + '.';
                 }
             }else if(action.key == '.' && !state.numB.includes('.') && newState.opPressed){
-                console.log(state.numB.includes('.'));
                 if(!state.numB.includes('.')){
                     newState.numB = state.numB + '.';
+                }
+            }else if(action.key == 'd'){
+                console.log(newState.opPressed);
+                if(state.numA != '' && newState.opPressed == false){
+                    newState.numA = newState.numA.slice(0, -1);
+                }else if(state.numB != '' && newState.opPressed){
+                    newState.numB = newState.numB.slice(0, -1);
                 }
             }else{
                 if(state.numA == '0' || state.numA == ''){
@@ -87,11 +92,7 @@ export const reducer = createReducer(
                             break;
                         case '/':
                             result = parseFloat(newState.numA) / parseFloat(newState.numB);
-                            if(result % 1 != 0){
-                                newState.numA = result.toFixed(2);
-                            }else{
-                                newState.numA = result.toString();
-                            }
+                            newState.numA = result.toString();
                             newState.numB = '';
                             break;
                     }
@@ -124,7 +125,6 @@ export const reducer = createReducer(
                             result.toFixed(2);
                             break;
                     }
-                    // console.log(result);
                     newState.result = result.toString();
                 }
                 

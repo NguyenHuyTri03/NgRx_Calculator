@@ -20,7 +20,7 @@
     width: 43rem;
     height: 10rem;
     position: relative;
-    margin: -2% auto 2% 6.5%;
+    margin: -2% auto auto 6.5%;
     background-color: beige;
     box-shadow: 7px 6px 11px 0px rgba(0,0,0,0.75);
     -webkit-box-shadow: 7px 6px 11px 0px rgba(0,0,0,0.75);
@@ -30,7 +30,6 @@
 #result{
     width: 30rem;
     text-align: right;
-    // background-color: red;
     position: absolute;
     color: black;
     font-size: 4rem;
@@ -48,13 +47,29 @@
 }
 
 .topBar > button{
+    display: block;
     border: none;
     background-color: #4C4C4C;
     width: 21.2rem;
     border-radius: 30px;
     font-size: 4rem;
-    margin-left: 4%;
-    margin-top: 5%;
+    margin-top: 8%;
+}
+
+#numAc{
+    border-radius: 1rem;
+    color: #C7C7C7;
+    margin-left: 7%;
+    margin-top: 25%;
+}
+
+#numDel{
+    border-radius: 1rem;
+    color: #C7C7C7;
+    width: 20%;
+    font-size: 4rem;
+    margin-left: 56.5%;
+    margin-top: -10%;
 }
 
 #numPlus{
@@ -63,9 +78,10 @@
     width: 8rem;
     font-size: 4rem;
     border-radius: 1rem;
-    margin-left: 30%;
-    margin-right: -1%;
-    margin-top: -5%;
+    // margin-left: 81.5%;
+    // margin-right: -1%;
+    // margin-top: -5%;
+    margin: -10% auto 11% 81.2%;
 }
 
 .numPadTop > button{
@@ -75,7 +91,7 @@
     width: 20%;
     font-size: 4rem;
     margin-left: 5%;
-    margin-top: 5%;
+    margin-top: -50%;
 }
 
 #num7{
@@ -117,11 +133,6 @@
     font-size: 4rem;
     margin-left: 6%;
     margin-top: -10%;
-}
-
-#numAc{
-    border-radius: 1rem;
-    color: #C7C7C7;
 }
 
 #numDot{

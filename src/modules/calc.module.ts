@@ -4,4 +4,5 @@ export interface Calc{
     equation: string;
     result: string;
     opPressed: boolean;
+    delPressed: boolean;
 }
