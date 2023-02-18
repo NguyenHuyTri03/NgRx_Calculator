@@ -1,0 +1,13 @@
+Made by NHTri
+
+=====================================================================
+v1.0:
+	-First version of the web
+	-Known bugs:
+		+Cannot do countinuous calculations without hitting "=" button
+
+v1.1:
+	-Fixed the bug from prev ver.
+
+v1.1.1:
+	-Added "changeLog.txt"
