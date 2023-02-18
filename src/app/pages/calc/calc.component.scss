@@ -1,0 +1,201 @@
+.calcDiv{
+    border-radius: 30px;
+    width: 40%;
+    height: 48rem;
+    text-align: center;
+    background-color: #010101;
+    padding: 2%;
+    margin: 0 auto;
+    margin-top: 4%;
+    margin-bottom: 5%;
+    box-shadow: 7px 6px 11px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 7px 6px 11px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 7px 6px 11px 0px rgba(0,0,0,0.75);
+}
+
+.resultDiv{
+    border-radius: 10px;
+    display: block;
+    float: left;
+    width: 43rem;
+    height: 10rem;
+    position: relative;
+    margin: -2% auto 2% 6.5%;
+    background-color: beige;
+    box-shadow: 7px 6px 11px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 7px 6px 11px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 7px 6px 11px 0px rgba(0,0,0,0.75);
+}
+
+#result{
+    width: 30rem;
+    text-align: right;
+    // background-color: red;
+    position: absolute;
+    color: black;
+    font-size: 4rem;
+    margin-left: 29%;
+    margin-top: 12%;
+}
+
+.numbers{
+    font-size: 4rem;
+    display: block;
+    float: left;
+    padding: 1%;
+    margin-top: 1%;
+    margin-left: 2%;
+}
+
+.topBar > button{
+    border: none;
+    background-color: #4C4C4C;
+    width: 21.2rem;
+    border-radius: 30px;
+    font-size: 4rem;
+    margin-left: 4%;
+    margin-top: 5%;
+}
+
+#numPlus{
+    border: none;
+    background-color: #ED8F11;
+    width: 8rem;
+    font-size: 4rem;
+    border-radius: 2rem;
+    margin-left: 30%;
+    margin-right: -1%;
+    margin-top: -5%;
+}
+
+.numPadTop > button{
+    border: none;
+    background-color: #C7C7C7;
+    border-radius: 5px;
+    width: 20%;
+    font-size: 4rem;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+#num7{
+    border-top-left-radius: 40px;
+}
+
+#num9{
+    border-top-right-radius: 40px;
+}
+
+.numPadMid > button{
+    border: none;
+    background-color: #C7C7C7;
+    border-radius: 5px;
+    width: 20%;
+    font-size: 4rem;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+.numPadLow > button{
+    border: none;
+    background-color: #C7C7C7;
+    border-radius: 5px;
+    width: 20%;
+    font-size: 4rem;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+#num0{
+    display: block;
+    float: left;
+    border: none;
+    background-color: #C7C7C7;
+    border-radius: 5px;
+    border-bottom-left-radius: 40px;
+    width: 21.4rem;
+    font-size: 4rem;
+    margin-left: 6%;
+    margin-top: -10%;
+}
+
+#numAc{
+    color: #C7C7C7;
+}
+
+#numDot{
+    display: block;
+    float: left;
+    border: none;
+    background-color: #C7C7C7;
+    border-radius: 5px;
+    border-bottom-right-radius: 40px;
+    width: 20%;
+    font-size: 4rem;
+    margin: -10% 0% 0% 6%;
+}
+
+#numeq{
+    display: block;
+    float: left;
+    border: none;
+    background-color: #ED8F11;
+    width: 8rem;
+    font-size: 4rem;
+    border-radius: 2rem;
+    margin-left: 82%;
+    margin-top: 5%;
+}
+
+#methods{
+    border: none;
+    background-color: #ED8F11;
+    width: 8rem;
+    font-size: 4rem;
+    border-radius: 2rem;
+}
+
+#methods:hover{
+    background-color: #e9aa59;
+    cursor: pointer;
+}
+
+#num0:hover{
+    background-color: #f3f3f3;
+    cursor: pointer;
+}
+
+#numPlus:hover{
+    background-color: #e9aa59;
+    cursor: pointer;
+}
+
+#numeq:hover{
+    background-color: #e9aa59;
+    cursor: pointer;
+}
+
+.topBar > button:hover{
+    background-color: #7a7a7a;
+    cursor: pointer;
+}
+
+.numPadTop > button:hover{
+    background-color: #f3f3f3;
+    cursor: pointer;
+}
+
+.numPadMid > button:hover{
+    background-color: #f3f3f3;
+    cursor: pointer;
+}
+
+.numPadLow > button:hover{
+    background-color: #f3f3f3;
+    cursor: pointer;
+}
+
+.numPadBase > button:hover{
+    background-color: #f3f3f3;
+    cursor: pointer;
+}

@@ -1,0 +1,40 @@
+<div class="calcDiv">
+    <div class="resultDiv">
+        <p class="numbers" id="numA">{{method}}</p>
+        <p id="result">{{final}}</p>
+    </div>
+    <div class="topBar">
+        <button (click)="keyPressed('AC', 'equation')" id="numAc">AC</button>
+        <button  (click)="keyPressed('+', 'equation')" id="numPlus">+</button>
+    </div>
+    <div class="numPadTop">
+        <button id="num7" (click)="keyPressed('7', 'num')">7</button>
+        <button (click)="keyPressed('8', 'num')">8</button>
+        <button id="num9" (click)="keyPressed('9', 'num')">9</button>
+        <button id="methods" (click)="keyPressed('-', 'equation')">-</button>
+    </div>
+
+    <div class="numPadMid">        
+        <button (click)="keyPressed('4', 'num')" class="numPad">4</button>
+        <button (click)="keyPressed('5', 'num')" class="numPad">5</button>
+        <button (click)="keyPressed('6', 'num')" class="numPad">6</button>
+        <button id="methods" (click)="keyPressed('x', 'equation')">x</button>
+    </div>
+
+    <div class="numPadLow">        
+        <button (click)="keyPressed('1', 'num')" class="numPad">1</button>
+        <button (click)="keyPressed('2', 'num')" class="numPad">2</button>
+        <button (click)="keyPressed('3', 'num')" class="numPad">3</button>
+        <button id="methods" (click)="keyPressed('/', 'equation')">/</button>   
+    </div>
+    
+    <div>
+        <button (click)="keyPressed('=', 'equation')" id="numeq">=</button>
+    </div>
+    <div class="numPadBase">
+        <button (click)="keyPressed('0', 'num')" id="num0">0</button>
+        <button (click)="keyPressed('.', 'num')" id="numDot">.</button>
+    </div>
+    
+    
+</div>
